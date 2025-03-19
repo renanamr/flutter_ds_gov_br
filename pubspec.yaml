@@ -1,0 +1,64 @@
+name: flutter_ds_gov_br
+description: "Pacote Flutter com componetes do Design System do governo do Brasil."
+version: 0.0.1
+
+environment:
+  sdk: '>=3.4.3 <4.0.0'
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  fonts:
+    - family: Rawline
+      fonts:
+        - asset: fonts/rawline-400.ttf
+        - asset: fonts/rawline-400i.ttf
+          style: italic
+        - asset: fonts/rawline-100.ttf
+          weight: 100
+        - asset: fonts/rawline-100i.ttf
+          style: italic
+          weight: 100
+        - asset: fonts/rawline-200.ttf
+          weight: 200
+        - asset: fonts/rawline-200i.ttf
+          style: italic
+          weight: 200
+        - asset: fonts/rawline-300.ttf
+          weight: 300
+        - asset: fonts/rawline-300i.ttf
+          style: italic
+          weight: 300
+        - asset: fonts/rawline-500.ttf
+          weight: 500
+        - asset: fonts/rawline-500i.ttf
+          style: italic
+          weight: 500
+        - asset: fonts/rawline-600.ttf
+          weight: 600
+        - asset: fonts/rawline-600i.ttf
+          style: italic
+          weight: 600
+        - asset: fonts/rawline-700.ttf
+          weight: 700
+        - asset: fonts/rawline-700i.ttf
+          weight: 700
+          style: italic
+        - asset: fonts/rawline-800.ttf
+          weight: 800
+        - asset: fonts/rawline-800i.ttf
+          style: italic
+          weight: 800
+        - asset: fonts/rawline-900.ttf
+          weight: 900
+        - asset: fonts/rawline-900i.ttf
+          style: italic
+          weight: 900
