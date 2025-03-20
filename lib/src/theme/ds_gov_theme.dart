@@ -65,7 +65,7 @@ class DSGovTheme {
     style: OutlinedButton.styleFrom(
       backgroundColor: _colorScheme.surface,
       foregroundColor: _colorScheme.primary,
-      side: BorderSide(color: _colorScheme.primary),
+      side: BorderSide(color: _colorScheme.primary, width: 2),
     ),
   );
 
@@ -113,6 +113,10 @@ class DSGovTheme {
       borderSide: BorderSide(color: _colorScheme.primary, width: 2.0),
     ),
 
+    focusedErrorBorder: OutlineInputBorder(
+      borderSide: BorderSide(color: _colorScheme.error, width: 2.0),
+    ),
+
     errorBorder: OutlineInputBorder(
       borderSide: BorderSide(color: _colorScheme.error, width: 2.0),
     ),
@@ -124,12 +128,20 @@ class DSGovTheme {
     labelStyle: const TextStyle(color: Colors.grey),
 
     floatingLabelStyle: WidgetStateTextStyle.resolveWith((states) {
+      if (states.contains(WidgetState.error)) {
+        return TextStyle(
+          color: _colorScheme.error,
+          fontWeight: FontWeight.w600,
+        );
+      }
+
       if (states.contains(WidgetState.focused)) {
         return TextStyle(
           color: _colorScheme.primary,
           fontWeight: FontWeight.w600,
         );
       }
+
       return const TextStyle(color: Colors.grey);
     }),
 
