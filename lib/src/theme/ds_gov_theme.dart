@@ -30,6 +30,7 @@ class DSGovTheme {
 
       appBarTheme: _appBarTheme,
       dividerTheme: _dividerTheme,
+      snackBarTheme: _snackBarTheme,
 
       elevatedButtonTheme: _elevatedButtonTheme,
       outlinedButtonTheme: _outlinedButtonTheme,
@@ -148,4 +149,12 @@ class DSGovTheme {
     errorStyle: TextStyle(color: _colorScheme.error),
   );
 
+  static final _snackBarTheme = SnackBarThemeData(
+    backgroundColor: _colorScheme.primary,
+    elevation: 4,
+    behavior: SnackBarBehavior.floating,
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(10),
+    ),
+  );
 }
