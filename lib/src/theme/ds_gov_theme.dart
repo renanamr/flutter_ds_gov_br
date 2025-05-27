@@ -104,10 +104,10 @@ class DSGovTheme {
   );
 
   static final _inputDecorationTheme = InputDecorationTheme(
-    floatingLabelBehavior: FloatingLabelBehavior.auto,
+    floatingLabelBehavior: FloatingLabelBehavior.always,
 
     enabledBorder: const OutlineInputBorder(
-      borderSide: BorderSide(color: Colors.grey),
+      borderSide: BorderSide(color: Color(0xffE0E0E0)),
     ),
 
     focusedBorder: OutlineInputBorder(
@@ -143,7 +143,7 @@ class DSGovTheme {
         );
       }
 
-      return const TextStyle(color: Colors.grey);
+      return TextStyle(color: _colorScheme.primary);
     }),
 
     errorStyle: TextStyle(color: _colorScheme.error),

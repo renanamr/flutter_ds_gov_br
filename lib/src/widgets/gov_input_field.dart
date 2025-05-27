@@ -26,7 +26,7 @@ class GovInputField extends StatelessWidget {
     this.suffixIcon,
     this.validator,
     this.obscureText = false,
-    this.padding = const EdgeInsets.symmetric(vertical: 4),
+    this.padding = const EdgeInsets.symmetric(vertical: 10),
     this.maxLength,
     this.minLines,
     this.maxLines,
