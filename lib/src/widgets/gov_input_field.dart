@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class GovInputField extends StatelessWidget {
   
@@ -13,6 +14,8 @@ class GovInputField extends StatelessWidget {
   final String? Function(String?)? validator;
 
   final String? hintText;
+
+  final List<TextInputFormatter>? inputFormatters;
 
   final int? maxLength;
   final int? minLines;
@@ -32,6 +35,7 @@ class GovInputField extends StatelessWidget {
     this.maxLines,
     this.keyboardType,
     this.hintText,
+    this.inputFormatters
   });
   
   @override
@@ -46,6 +50,7 @@ class GovInputField extends StatelessWidget {
         minLines: minLines,
         maxLines: maxLines,
         keyboardType: keyboardType,
+        inputFormatters: inputFormatters,
         decoration: InputDecoration(
             hintText: hintText,
             labelText: label,
