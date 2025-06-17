@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class GovInputField extends StatelessWidget {
   
@@ -12,6 +13,15 @@ class GovInputField extends StatelessWidget {
 
   final String? Function(String?)? validator;
 
+  final String? hintText;
+
+  final List<TextInputFormatter>? inputFormatters;
+
+  final int? maxLength;
+  final int? minLines;
+  final int? maxLines;
+  final TextInputType? keyboardType;
+
   const GovInputField({
     super.key,
     required this.label,
@@ -19,7 +29,13 @@ class GovInputField extends StatelessWidget {
     this.suffixIcon,
     this.validator,
     this.obscureText = false,
-    this.padding = const EdgeInsets.symmetric(vertical: 4),
+    this.padding = const EdgeInsets.symmetric(vertical: 10),
+    this.maxLength,
+    this.minLines,
+    this.maxLines,
+    this.keyboardType,
+    this.hintText,
+    this.inputFormatters
   });
   
   @override
@@ -30,7 +46,13 @@ class GovInputField extends StatelessWidget {
         controller: controller,
         obscureText: obscureText,
         validator: validator,
+        maxLength: maxLength,
+        minLines: minLines,
+        maxLines: maxLines,
+        keyboardType: keyboardType,
+        inputFormatters: inputFormatters,
         decoration: InputDecoration(
+            hintText: hintText,
             labelText: label,
             suffixIcon: suffixIcon,
             suffixIconColor: Theme.of(context).primaryColor
